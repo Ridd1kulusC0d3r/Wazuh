@@ -28,4 +28,4 @@ Defina o comportamento e a telemetria antes da sintaxe da regra. Decoders, campo
 
 Use o [`wazuh-logtest`](https://documentation.wazuh.com/current/user-manual/ruleset/testing.html) no ambiente correspondente para inspecionar parsing e regras. Testes de regra não substituem a verificação de ingestão, geração de alerta, indexação e triagem de ponta a ponta.
 
-**Entrega:** especificação, regra quando implementada, amostras de teste, resultado obtido e runbook. Neste estágio, o repositório entrega o guia; não há ruleset certificado ou pronto para produção.
+**Entrega:** especificação, regra quando implementada, amostras de teste, resultado obtido e runbook. O [caso PHP2Shell](vulnerabilities/php2shell/README.md) inclui um snapshot de terceiros com revisão estática. Não há ruleset certificado ou pronto para produção.

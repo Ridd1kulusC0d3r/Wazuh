@@ -42,3 +42,7 @@ As quatro primeiras cores vêm do [guia de identidade Wazuh](https://wazuh.com/d
 | [detection.svg](../assets/detection.svg) | Capa de detecção |
 
 Projeto independente. Não usar expressões ou selos que sugiram certificação, parceria ou endosso da Wazuh.
+
+## Extensão 04 · Vulnerabilidades e CVEs
+
+[Capas de vulnerabilidades](../assets/vulnerabilities.svg) reutilizam azul/preto e amarelo de atenção. O número 04 distingue a trilha; cores não representam score CVSS.

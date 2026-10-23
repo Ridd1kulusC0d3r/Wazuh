@@ -1,0 +1,54 @@
+[
+  {
+    "id": "multipart-chunked",
+    "synthetic": true,
+    "log": "php2shell ip=192.0.2.10 ts=\"2026-10-23T12:00:00-0300\" req=\"POST /test HTTP/1.1\" status=200 bytes=100 ref=\"-\" ua=\"synthetic-fixture\" ct=\"multipart/form-data; boundary=test\" te=\"chunked\" cl=\"-\" sc=\"-\"",
+    "expected_rules": [
+      "100130"
+    ],
+    "must_not_match": [],
+    "runtime_verified": false
+  },
+  {
+    "id": "cookie-percent",
+    "synthetic": true,
+    "log": "php2shell ip=192.0.2.10 ts=\"2026-10-23T12:00:00-0300\" req=\"POST /test HTTP/1.1\" status=200 bytes=100 ref=\"-\" ua=\"synthetic-fixture\" ct=\"text/plain\" te=\"-\" cl=\"10\" sc=\"PHPSESSID=test%00value; path=/\"",
+    "expected_rules": [
+      "100131"
+    ],
+    "must_not_match": [],
+    "runtime_verified": false
+  },
+  {
+    "id": "multipart-length",
+    "synthetic": true,
+    "log": "php2shell ip=192.0.2.10 ts=\"2026-10-23T12:00:00-0300\" req=\"POST /test HTTP/1.1\" status=200 bytes=100 ref=\"-\" ua=\"synthetic-fixture\" ct=\"multipart/form-data; boundary=test\" te=\"-\" cl=\"100\" sc=\"-\"",
+    "expected_rules": [],
+    "must_not_match": [
+      "100130",
+      "100131"
+    ],
+    "runtime_verified": false
+  },
+  {
+    "id": "cookie-normal",
+    "synthetic": true,
+    "log": "php2shell ip=192.0.2.10 ts=\"2026-10-23T12:00:00-0300\" req=\"POST /test HTTP/1.1\" status=200 bytes=100 ref=\"-\" ua=\"synthetic-fixture\" ct=\"text/plain\" te=\"-\" cl=\"10\" sc=\"PHPSESSID=abcdefghijklmnop0123456789; path=/\"",
+    "expected_rules": [],
+    "must_not_match": [
+      "100130",
+      "100131"
+    ],
+    "runtime_verified": false
+  },
+  {
+    "id": "other-cookie",
+    "synthetic": true,
+    "log": "php2shell ip=192.0.2.10 ts=\"2026-10-23T12:00:00-0300\" req=\"POST /test HTTP/1.1\" status=200 bytes=100 ref=\"-\" ua=\"synthetic-fixture\" ct=\"text/plain\" te=\"-\" cl=\"10\" sc=\"other=test%00value, PHPSESSID=abc123\"",
+    "expected_rules": [],
+    "must_not_match": [
+      "100131"
+    ],
+    "runtime_verified": false
+  }
+]

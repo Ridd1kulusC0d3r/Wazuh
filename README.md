@@ -5,7 +5,8 @@
 <p align="center">
   <a href="docs/cti.md">01 · Threat Intelligence</a> &nbsp; / &nbsp;
   <a href="docs/hunting.md">02 · Threat Hunting</a> &nbsp; / &nbsp;
-  <a href="docs/detection.md">03 · Detection Engineering</a>
+  <a href="docs/detection.md">03 · Detection Engineering</a> &nbsp; / &nbsp;
+  <a href="docs/vulnerabilities/README.md">04 · Vulnerabilidades e CVEs</a>
 </p>
 
 ---
@@ -14,7 +15,7 @@
 
 Um espaço de engenharia defensiva em português para conectar **inteligência de ameaças, investigação orientada por hipóteses e detecções no Wazuh**. O objetivo é construir uma cadeia rastreável: fonte, comportamento, telemetria, evidência, regra e validação.
 
-**Estado atual:** fundação documental e identidade visual. Os guias definem o fluxo de trabalho; este repositório ainda não entrega regras executáveis, integrações prontas ou um ambiente de laboratório instalado.
+**Estado atual:** guias e identidade visual, com uma trilha de vulnerabilidades e CVEs iniciada por PHP2Shell. O pacote de terceiros inclui regras, decoders e SCA com revisão estática; validação local em Wazuh e laboratório instalado ainda estão pendentes.
 
 <p align="center"><img src="assets/tracks.svg" alt="Três trilhas: CTI produz contexto; Hunting produz evidência; Detection produz regras validadas." width="100%"></p>
 
@@ -25,6 +26,14 @@ Um espaço de engenharia defensiva em português para conectar **inteligência d
 | **01 / CTI** | Qual ameaça é relevante para o nosso ambiente? | Brief com fontes, confiança e requisitos de coleta | [Guia de inteligência](docs/cti.md) |
 | **02 / Hunting** | Que evidência sustentaria ou refutaria a hipótese? | Registro de investigação, limitações e lacunas | [Guia de hunting](docs/hunting.md) |
 | **03 / Detection** | Como tornar esse comportamento observável e testável? | Especificação de regra, testes e orientação de triagem | [Guia de detecção](docs/detection.md) |
+
+## 04 / Vulnerabilidades e CVEs
+
+![Vulnerability Intelligence](assets/vulnerabilities.svg)
+
+**Primeiro caso: PHP2Shell — CVE-2026-109618 e CVE-2026-109619.** Exposição, sinais HTTP, hunting comportamental e remediação, com autoria, licença e versão do pacote preservadas. Inclui análise do comunicado adicional do PHP de 23/10/2026.
+
+[Explorar a trilha](docs/vulnerabilities/README.md) · [Caso PHP2Shell](docs/vulnerabilities/php2shell/README.md) · [Validação](docs/vulnerabilities/php2shell/validation.md)
 
 ## Do contexto ao aprendizado
 

@@ -1,0 +1,30 @@
+{
+  "upstream": "https://github.com/mym0us3r/PHP2Shell-Detection-with-Wazuh",
+  "commit": "17253b3185380956e4fc0aade158f8001793e2c5",
+  "reviewed_on": "2026-10-23",
+  "license": "MIT",
+  "author": "Kislley Rodrigues (m0us3r)",
+  "validation": "static-only; upstream runtime claims not reproduced locally",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "acd1b791e0bbd6e61f93477dae60ef81660c25e3"
+    },
+    {
+      "path": "rules/php2shell_rules.xml",
+      "git_blob_sha": "a79cdcc154b1ee0aa02e3645e684b11caf73157c"
+    },
+    {
+      "path": "decoders/php2shell_decoders.xml",
+      "git_blob_sha": "6e1cb4e1bb7deb12a7c2ba818829163d3b5aa0ec"
+    },
+    {
+      "path": "apache/php2shell-logformat.conf",
+      "git_blob_sha": "3ef7738886e8122e133020be99469b4dd7947a4d"
+    },
+    {
+      "path": "sca/php2shell_cve_2026_109618_109619.yml",
+      "git_blob_sha": "54390a88dde5440ed4c9eba691f418270cf2b8f4"
+    }
+  ]
+}
